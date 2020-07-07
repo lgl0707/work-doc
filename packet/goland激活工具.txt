@@ -1,0 +1,2 @@
+jetbrains-agent-latest.zip
+直接拖拽到goland上
