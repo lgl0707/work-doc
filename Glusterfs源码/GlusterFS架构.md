@@ -30,3 +30,19 @@ GlusterFS架构
 
    /usr/local/sbin/glusterfs --process-name fuse --volfile-server=192.168.4.121 --volfile-id=test-volume2 /home/lgl/test/
 
+二、工作原理
+
+[GlusterFS 结构体系分析]: https://blog.csdn.net/wangyuling1234567890/article/details/24601417?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&amp;dist_request_id=93d66fdf-5fec-4ef3-b195-3eee659feca9&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control
+
+
+
+[复制卷的恢复机制]: https://www.cnblogs.com/kevingrace/p/8764902.html
+
+
+
+[GlusterFS分布式存储]: https://www.cnblogs.com/kevingrace/p/8709544.html
+
+
+
+
+
