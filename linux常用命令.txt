@@ -1,0 +1,69 @@
+简单的命令
+grep -nr '123456' ./
+
+dpkg安装卸载deb命令：
+sudo dpkg -l 查看已经安装的软件
+sudo dpkg -r 软件名 卸载
+sudo dpkg -i name.deb 安装
+
+apt
+apt install 安装
+apt purge   卸载
+apt-cache search 查看源中相关安装包
+
+rpm与yum包的安装与卸载
+rpm -ivh rpm包
+rpm -e 
+rpm -qa | grep   列出rpm包
+
+yum search 列出相关安装包
+
+
+
+test命令和install命令
+
+
+复杂的命令
+1、当前系统内存使用量较高的进程
+ps -aux | sort -rnk 4 | head -20
+2、当前系统CPU使用量较高的进程
+ps -aux | sort -rnk 3 | head -20
+3、查看tcp连接状态
+netstat -nat |awk ‘{print $6}’|sort|uniq -c|sort -rn
+4、查找80端口请求数最高的前20个IP
+netstat -anlp|grep 80|grep tcp|awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c|sort -nr|head -n20
+
+
+
+vi 文本内容替换
+全文替换
+%s#abc#def#g（用def替换文件中所有的abc）
+
+在所有行末尾加上 \
+%s/$/\ \\
+
+
+多文件替换
+sed -i "s/lxc/panaocs/g" test1  test2 test3
+
+sed -i "s/lxc/panaocs/g" `find ./ -name 'panaocs*.sgml.in'`   ``符号
+
+网络：
+添加网关的命令
+route add default gw 192.168.1.1
+dhclient eth1
+
+
+自动解决依赖关系：
+yum install *.rpm
+
+
+ifup eth0
+修改配置文件：/etc/sysconfig/network-scripts/ifcfg-eth0 
+
+修改环境变量：
+export PATH=/home/lgl/D_pan/Qt5.10/5.10.0/gcc_64/bin:$PATH
+export LD_LIBRARY_PATH=/home/lgl/D_pan/Qt5.10/5.10.0/gcc_64/lib:$LD_LIBRARY_PATH
+export QT_PLUGIN_PATH=/home/lgl/D_pan/Qt5.10/5.10.0/gcc_64/plugins:$QT_PLUGIN_PATH
+export QML2_IMPORT_PATH=/home/lgl/D_pan/Qt5.10/5.10.0/gcc_64/qml:$QML2_IMPORT_PATH
+
